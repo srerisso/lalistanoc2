@@ -14,35 +14,11 @@
 
 <div id="pelis" class="row list-group">
     <% @movies.each do |movie| %>
-    <div class="item col-lg-6">
-        <div class="list-group">
-          <div class="list-group-item">
-            <div class="media col-md-6">
-                <!--<img class="media-object img-rounded img-responsive "  src="images/theimitationgame.jpg" alt="the imitation game">-->
-                <%= link_to (image_tag movie.image.url(:medium), class: 'media-object img-responsive') %>
-            </div>
-            <div class="col-md-6">
-                <h4><%= movie.title %></h4>
-                <h4><%= movie.fechaestreno %></h4>
-                <h4 class="list-group-item-heading"> De qu&eacute; va</h4>
-                <p class="list-group-item-text"> <%= movie.description %> </p>
-                <h4>Informaci&oacute;n</h4>
-                <p>
-                    <a href="http://www.imdb.com/title/tt2084970/" target="_new">Ficha de la peli en IMDB</a><br>
-                    <a href="http://www.rottentomatoes.com/m/the_imitation_game/?search=the%20imitation" alt="Rotten Tomatoes" target="_new">Critica en Rotten Tomatoes</a><br>
-                    <a href="http://www.metacritic.com/movie/the-imitation-game" alt="Metacritic" target="_new">Crítica en Metacritic</a>
-                </p>
-                <p>
-                    <%= link_to 'Edit', edit_movie_path(movie) %><br>
-                    <%= link_to 'Show', movie_path(movie) %>
-                </p>
-            </div>
-            <div class="clearfix"></div>
-          </div> <!-- list-group-item -->
-        </div>
-    </div>
+    <div class="item col-md-3">
+        <%= link_to (image_tag movie.image.url(:medium), class: 'thumbnail') %>
+    </div> <!-- list-group-item -->
     <% end %>
-
+</div>
 <br>
 
 <%= link_to 'New Movie', new_movie_path %>
