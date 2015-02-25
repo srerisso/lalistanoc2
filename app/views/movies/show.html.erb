@@ -1,7 +1,7 @@
 <div clas="panel panel-default">
     <div class="panel-body">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <%= image_tag @movie.image.url(:medium) %>
                 <div class="table-responsive">
                     <table class="table">
@@ -22,9 +22,28 @@
                                 <td><strong>Fecha estreno</strong></td>
                                 <td><%= @movie.fechaestreno %></td>
                             </tr>
+                            <tr>
+                                <td colspan="2"><%= link_to 'New movie review', new_movie_review_path(@movie) %></td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
+            </div>
+            <div class="col-md-5 col-offset-1">
+                <h1 class="review_title"><%= @movie.title %></h1>
+                <p><%= @movie.description %></p>
+
+                <% if @reviews.blank? %>
+                <h3>No reviews just yet</h3>
+                <%= link_to 'Write Review', new_movie_review_path(@movie), class: "btn btn-danger" %>
+                <% else %>
+                    <% @reviews.each do |review| %>
+                    <div class="reviews">
+                        <p><%= review.rating %></p>
+                        <p><%= review.comment %></p>
+                    </div>
+                    <% end %>
+                <% end %>
             </div>
         </div>
     </div>
