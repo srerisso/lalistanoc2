@@ -20,3 +20,20 @@
 body {
     background-color: #F0F4C3
 }
+
+/* footer styles */
+/* CSS used here will be applied after bootstrap.css */
+@media (min-width: 768px) {
+  .site-footer {
+    text-align: center;
+    background-color: #F8F8F8;
+    margin-top: 20px;
+    padding: 20px;
+  }
+  
+  .footer-links .nav > li,
+  .social-bar .nav > li {
+  	display: inline-block;
+    float: none;
+  }
+}

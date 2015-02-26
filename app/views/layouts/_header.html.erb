@@ -15,8 +15,8 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
           <% if user_signed_in? %>
-            <li><%= link_to "New movie", new_movie_path, class: "active" %></li>
-            <li><%= link_to "Account", edit_user_registration_path %></li>
+            <li><%= link_to "Añadir peli", new_movie_path, class: "active" %></li>
+            <li><%= link_to "Tu perfil", edit_user_registration_path %></li>
           <% else %>
             <li><%= link_to "Sign in", new_user_session_path, class: "active" %></li>
             <li><%= link_to "Sign up", new_user_registration_path, class: "active" %></li>
@@ -24,7 +24,7 @@
       </ul>
       <form class="navbar-form navbar-right" role="search">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
+          <input type="text" class="form-control" placeholder="Buscar">
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
