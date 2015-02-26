@@ -49,9 +49,9 @@
     </div>
 </div>
 
-<%= button_tag 'Borrar peli', class:'btn btn-danger' %><br>
-<%= link_to 'Editar', edit_movie_path(@movie) %> |
-<%= link_to 'Volver', movies_path %>
+<%= link_to 'Borrar peli', @movie, method: :delete, data: { confirm: '¿Est&aacute;s seguro ?'}, class:'btn btn-link' %>
+<%= link_to 'Editar', edit_movie_path(@movie), class:'btn btn-link' %> |
+<%= link_to 'Volver', movies_path, class:'btn btn-link' %>
 
 <script type="text/javascript">
     $('.star-rating').raty({
