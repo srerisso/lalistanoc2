@@ -17,6 +17,7 @@
           <% if user_signed_in? %>
             <li><%= link_to "Añadir peli", new_movie_path, class: "active" %></li>
             <li><%= link_to "Tu perfil", edit_user_registration_path %></li>
+            <li><%= link_to "Salir", destroy_user_session_path, :method => :delete %></li>
           <% else %>
             <li><%= link_to "Sign in", new_user_session_path, class: "active" %></li>
             <li><%= link_to "Sign up", new_user_registration_path, class: "active" %></li>
