@@ -1,3 +1,44 @@
 // Place all the styles related to the Movies controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Copiado de http://bootstrap.snipplicious.com/snippet/15/event-list
+// Lista de events (movies en nuestro caso)
+.movie .overlay:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.movie .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.35s ease;
+    -webkit-transition: all 0.35s ease;
+    -moz-transition: all 0.35s ease;
+    -o-transition: all 0.35s ease;
+    -ms-transition: all 0.35s ease;
+    border-radius: inherit;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.movie .overlay {
+    background-color: rgba(0,0,255,0.15);
+}
+
+.movie .label.date {
+    font-size: 20px;
+}
+
+.movie {
+    padding: 1em;
+}
+
+.movie p {
+    margin-top: 1em;
+}

@@ -14,11 +14,16 @@
 
 <div id="pelis" class="row list-group">
     <% @movies.each do |movie| %>
-    <div class="item col-md-3">
-        <%= link_to (image_tag movie.image.url(:medium), class: 'thumbnail'), movie %>
-    </div> <!-- list-group-item -->
+    <div class="movie col-sm-4">
+      <div class="thumbnail">
+        <div class="overlay"></div>
+          <%= link_to (image_tag movie.image.url(:medium), class: 'thumbnail'), movie %>
+          <span><strong><%= movie.title %></strong></span><br>
+          <span><%= movie.fechaestreno %></span>
+      </div>
+      </div>
     <% end %>
-</div>
+</div> <!-- list-group-item -->
 <br>
 
 <%= link_to 'Añadir peli', new_movie_path, class: 'btn btn-primary' %>
