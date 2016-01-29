@@ -1,14 +1,18 @@
 <% if !user_signed_in? %>
     <div class="jumbotron">
-        <h1>You favourite movies reviewed</h1>
+        <h2>Las películas que te gusta ver</h2>
         <p><!-- start slipsum code -->
-            Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass.
+          - Déjenme hacerles una pregunta. ¿Y si no hubiera un mañana?<br>
+          - ¿Si no hubiera un mañana? Entonces no habría consecuencias. No tendría resaca.<br>
+          - Podríamos hacer lo que quisiéramos.<br>
+          <p><i><a href="http://www.imdb.com/title/tt0107048/?ref_=fn_al_tt_1" target="_new">Atrapado en el tiempo</a></i> (1993)</p>
         <!-- please do not remove this line -->
         <div style="display:none;">
         <a href="http://slipsum.com">lorem ipsum</a></div>
         <!-- end slipsum code -->
         </p>
-        <p><%= link_to "Sign up to write a review", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
+        <p><%= link_to "Registrarse", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+        <%= link_to "Login", new_user_session_path, class: 'btn btn-primary btn-lg'  %></p>
     </div>
 <% end %>
 
