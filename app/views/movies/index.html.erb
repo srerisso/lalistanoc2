@@ -20,7 +20,6 @@
     <% @movies.each do |movie| %>
     <div class="movie col-sm-4">
       <div class="thumbnail">
-        <div class="overlay"></div>
           <%= link_to (image_tag movie.image.url(:medium), class: 'thumbnail'), movie %>
           <span><strong><%= movie.title %></strong></span><br>
           <span><%= movie.fechaestreno %></span>
