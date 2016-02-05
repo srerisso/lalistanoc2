@@ -1,0 +1,84 @@
+
+---
+movies:
+  columns:
+  - id
+  - title
+  - description
+  - movie_length
+  - director
+  - rating
+  - productora
+  - created_at
+  - updated_at
+  - user_id
+  - image_file_name
+  - image_content_type
+  - image_file_size
+  - image_updated_at
+  - fechaestreno
+  records: 
+  - - 1
+    - The hateful eight
+    - 'In the dead of a Wyoming winter, a bounty hunter and his prisoner find shelter
+      in a cabin currently inhabited by a collection of nefarious characters. '
+    - '187'
+    - Quentin Tarantino
+    - ''
+    - ''
+    - '2016-02-05 10:53:47.283039'
+    - '2016-02-05 10:53:47.283039'
+    - 1
+    - the-hateful-eight-poster-2.jpg
+    - image/jpeg
+    - 1196742
+    - '2016-02-05 10:53:46.818412'
+    - '2016-01-15'
+  - - 2
+    - The revenant
+    - A frontiersman on a fur trading expedition in the 1820s fights for survival
+      after being mauled by a bear and left for dead by members of his own hunting
+      team
+    - '156'
+    - ''
+    - ''
+    - ''
+    - '2016-02-05 10:57:46.711279'
+    - '2016-02-05 10:57:46.711279'
+    - 1
+    - revenant-leo.jpg
+    - image/jpeg
+    - 311546
+    - '2016-02-05 10:57:46.612245'
+    - '2016-02-05'
+
+---
+users:
+  columns:
+  - id
+  - email
+  - encrypted_password
+  - reset_password_token
+  - reset_password_sent_at
+  - remember_created_at
+  - sign_in_count
+  - current_sign_in_at
+  - last_sign_in_at
+  - current_sign_in_ip
+  - last_sign_in_ip
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - jmgomezr@gmail.com
+    - "$2a$10$Neg39nDPdqm3rimFi.y85.3gRgVec7aLPloMKl3Z61NREYMM0Pdj6"
+    - 
+    - 
+    - 
+    - 1
+    - '2016-02-05 10:50:52.748422'
+    - '2016-02-05 10:50:52.748422'
+    - 127.0.0.1
+    - 127.0.0.1
+    - '2016-02-05 10:50:52.740446'
+    - '2016-02-05 10:50:52.749158'
