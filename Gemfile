@@ -29,3 +29,5 @@ gem 'bootstrap-sass', '~> 3.3.3'
 gem 'searchkick'
 # Exportar BD a fcihero yaml
 gem 'yaml_db'
+# Bootstrap
+#gem 'bootstrap', '~> 4.0', '>= 4.0.0.alpha3'
