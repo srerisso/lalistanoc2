@@ -12,6 +12,9 @@
     <div class="container">
         <p class="notice"><%= notice %></p>
         <p class="alert"><%= alert %></p>
+        
+        <%= link_to 'Añadir peli', new_movie_path, class: 'btn btn-primary' %>
+
         <%= yield %>
     </div>
 

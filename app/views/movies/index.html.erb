@@ -15,18 +15,18 @@
         <%= link_to "Login", new_user_session_path, class: 'btn btn-primary btn-lg'  %></p>
     </div>
 <% end %>
+  <div id="pelis" class="row list-group">
+      <% @movies.each do |movie| %>
+      <div class="movie col-sm-4">
+        <div class="thumbnail">
+            <%= link_to (image_tag movie.image.url(:medium), class: 'thumbnail'), movie %>
+            <span><strong><%= movie.title %></strong></span><br>
+            <span><%= movie.fechaestreno %></span>
+        </div>
+        </div>
+      <% end %>
+  </div> <!-- list-group-item -->
 
-<div id="pelis" class="row list-group">
-    <% @movies.each do |movie| %>
-    <div class="movie col-sm-4">
-      <div class="thumbnail">
-          <%= link_to (image_tag movie.image.url(:medium), class: 'thumbnail'), movie %>
-          <span><strong><%= movie.title %></strong></span><br>
-          <span><%= movie.fechaestreno %></span>
-      </div>
-      </div>
-    <% end %>
-</div> <!-- list-group-item -->
-<br>
-
-<%= link_to 'Añadir peli', new_movie_path, class: 'btn btn-primary' %>
+  <% if user_signed_in? %>
+    <%= link_to 'Añadir peli', new_movie_path, class: 'btn btn-primary' %>
+  <% end %>

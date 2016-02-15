@@ -13,14 +13,14 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav navbar-right">
           <% if user_signed_in? %>
             <li><%= link_to "Añadir peli", new_movie_path, class: "active" %></li>
             <li><%= link_to "Tu perfil", edit_user_registration_path %></li>
             <li><%= link_to "Salir", destroy_user_session_path, :method => :delete %></li>
           <% else %>
-            <li><%= link_to "Sign in", new_user_session_path, class: "active" %></li>
-            <li><%= link_to "Sign up", new_user_registration_path, class: "active" %></li>
+            <li><%= link_to "Login", new_user_session_path, class: "active" %></li>
+            <li><%= link_to "Registrarse", new_user_registration_path, class: "active" %></li>
           <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
