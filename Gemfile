@@ -26,7 +26,7 @@ gem 'spring',        group: :development
 gem 'devise', '~> 3.4.1'
 gem 'paperclip', '~> 4.2.1'
 gem 'bootstrap-sass', '~> 3.3.3'
-gem 'searchkick'
+#gem 'searchkick'
 # Exportar BD a fcihero yaml
 gem 'yaml_db'
 # Bootstrap
