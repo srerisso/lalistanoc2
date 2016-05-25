@@ -17,28 +17,19 @@
 <% end %>
   
       <% @movies.each do |movie| %>
-        <div id="pelis" class="row lista-pelis">
-          <div class="col-md-7">
+        <div id="peli" class="row lista-pelis">
+          <div class="col-md-4">
             <%= link_to (image_tag movie.image.url(:medium), class: 'img-responsive'), movie %>
           </div>
-          <div class="col-md-5">
+          <div class="col-md-4">
               <h3><%= movie.title %></h3>
               <h4></h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
-              <a class="btn btn-primary" href="#"> M&aacute;s info </a>
+              <p>Sinopsis: <%= movie.description %></p>
+              <p>Duración: <%= movie.movie_length %></p>
+              <p>Fecha de estreno: <%= movie.fechaestreno %></p>
           </div>
-<!--
-      <div class="movie col-sm-4">
-        <div class="thumbnail">
-            <%= link_to (image_tag movie.image.url(:medium), class: 'thumbnail'), movie %>
-            <span><strong><%= movie.title %></strong></span><br>
-            <span><%= movie.fechaestreno %></span>
-        </div>
-        </div>
--->
+          <div class="col-md-4">
+            
+          </div>          
         </div> <!-- row -->
       <% end %>
-
-  <% if user_signed_in? %>
-    <%= link_to 'Añadir peli', new_movie_path, class: 'btn btn-primary' %>
-  <% end %>
