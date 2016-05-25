@@ -15,21 +15,24 @@
         <%= link_to "Login", new_user_session_path, class: 'btn btn-primary btn-lg'  %></p>
     </div>
 <% end %>
-  
+
+  <div id="peli" class="row lista-pelis">  
       <% @movies.each do |movie| %>
-        <div id="peli" class="row lista-pelis">
           <div class="col-md-4">
-            <%= link_to (image_tag movie.image.url(:medium), class: 'img-responsive'), movie %>
+            <%= link_to (image_tag movie.image.url, class: 'img-responsive'), movie %>
           </div>
-          <div class="col-md-4">
-              <h3><%= movie.title %></h3>
-              <h4></h4>
-              <p>Sinopsis: <%= movie.description %></p>
-              <p>Duración: <%= movie.movie_length %></p>
-              <p>Fecha de estreno: <%= movie.fechaestreno %></p>
-          </div>
-          <div class="col-md-4">
-            
-          </div>          
-        </div> <!-- row -->
       <% end %>
+  </div> <!-- row -->      
+
+<!--
+<div class="col-md-4">
+    <h3><%= movie.title %></h3>
+    <h4></h4>
+    <p>Sinopsis: <%= movie.description %></p>
+    <p>Duración: <%= movie.movie_length %></p>
+    <p>Fecha de estreno: <%= movie.fechaestreno %></p>
+    <p>
+      <button class="btn btn-primary" href="<%= link_to movie %>"></button>
+    </p>
+</div>
+-->
