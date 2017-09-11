@@ -16,6 +16,7 @@
     </div>
 <% end %>
 
+<% if @movies %>
   <div id="peli" class="row lista-pelis">  
       <% @movies.each do |movie| %>
           <div class="col-md-4">
@@ -24,6 +25,11 @@
       <% end %>
   </div> <!-- row -->      
 
+<% else %>
+  <div class="col-md-4">
+    No Movies in the DB yet.
+  </div>
+<% end %>
 <!--
 <div class="col-md-4">
     <h3><%= movie.title %></h3>
