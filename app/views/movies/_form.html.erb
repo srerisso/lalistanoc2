@@ -17,8 +17,8 @@
   </div>
   <div class="form-group">
     <%= f.label :fechaestreno %><br>
-    
-    <%= select_date Date.today, prefix: :start_date %>
+    <!--<%= select_date Date.today, prefix: :fechaestreno %>-->
+    <%= date_select :movie, :fechaestreno %>
   </div>
   <div class="form-group">
     <%= f.label :description %><br>

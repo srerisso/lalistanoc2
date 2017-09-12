@@ -19,14 +19,21 @@
 <% if @movies %>
   <div id="peli" class="row lista-pelis">  
       <% @movies.each do |movie| %>
-          <div class="col-md-4">
+          <div class="col-md-12">
+            <h2><%= movie.title %></h2>
+            <p>Estreno el <% if movie.fechaestreno != nil %>
+                            <%= movie.fechaestreno.strftime("%d-%m-%Y") %>
+                          <% else %>
+                             <%= 'Sin fecha de estreno' %>
+                          <% end %>
+            </p>
             <%= link_to (image_tag movie.image.url, class: 'img-responsive'), movie %>
           </div>
       <% end %>
   </div> <!-- row -->      
 
 <% else %>
-  <div class="col-md-4">
+  <div class="col-md-3">
     No Movies in the DB yet.
   </div>
 <% end %>
