@@ -17,23 +17,23 @@
 <% end %>
 
 <% if @movies %>
-  <div id="peli" class="row lista-pelis">  
-      <% @movies.each do |movie| %>
-          <div class="col-md-12">
-            <h2><%= movie.title %></h2>
-            <p>Estreno el <% if movie.fechaestreno != nil %>
-                            <%= movie.fechaestreno.strftime("%d-%m-%Y") %>
-                          <% else %>
-                             <%= 'Sin fecha de estreno' %>
-                          <% end %>
-            </p>
-            <%= link_to (image_tag movie.image.url, class: 'img-responsive'), movie %>
-          </div>
-      <% end %>
-  </div> <!-- row -->      
+    <% @movies.each do |movie| %>
+      <div class="row">
+        <div class="col-xs-6 col-md-3">
+          <%= link_to (image_tag movie.image.url(:medium), class: 'img-responsive thumbnail'), movie %>
+        </div>
+        <h3><%= movie.title %></h3>
+          <p>Estreno: <% if movie.fechaestreno != nil %>
+                                <%= movie.fechaestreno.strftime("%d-%m-%Y") %>
+                              <% else %>
+                                 <%= 'Sin fecha de estreno' %>
+                              <% end %>
+          </p>
+      </div>
+    <% end %>
 
 <% else %>
-  <div class="col-md-3">
+  <div class="col-xs-6 col-md-3">
     No Movies in the DB yet.
   </div>
 <% end %>
